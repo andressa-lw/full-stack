@@ -1,0 +1,26 @@
+:root {
+	--main-red: #e3646e;
+	--main-purple: #bb72e9;
+	--main-blue: #3996db;
+	--main-green: #82bc4f;
+	--main-yellow: #eabd5f;
+	--base-gray-600: #0d0e11;
+	--base-gray-500: #16181d;
+	--base-gray-400: #292c34;
+	--base-gray-300: #878ea1;
+	--base-gray-200: #c0c4ce;
+	--base-gray-100: #e2e4e9;
+
+  --title-family: "Asap", sans-serif;
+  --subtitle-family: "Inconsolata", monospace;
+  --font-family: "Maven Pro", sans-serif;
+
+  --title-lg: bold 56px/120% var(--title-family);
+  --title-md: bold 24px/120% var(--title-family);
+  --title-sm: bold 16px/120% var(--title-family);
+
+  --subtitle: normal 20px/120% var(--subtitle-family);
+
+  --text-md: normal 16px/140% var(--font-family);
+  --text-sm: normal 14px/140% var(--font-family);
+}

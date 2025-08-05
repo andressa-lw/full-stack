@@ -73,6 +73,25 @@ form {
       outline: none;
       color: var(--text-heading);
     }
+
+    &:invalid {
+      border: 1px solid var(--feedback-danger);
+    }
+
+    &[required] + .error {
+      display: flex;
+      align-items: center;
+      column-gap: .5rem;
+
+      span {
+        font: var(--text-xs);
+        color: var(--feedback-danger);
+      }
+    }
+
+    &:valid + .error {
+      display: none;
+    }
   }
 
   & textarea {

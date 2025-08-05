@@ -1,0 +1,391 @@
+form {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  margin-top: 3rem;
+
+  & fieldset {
+    border: 0;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+
+    & legend {
+      display: flex;
+      align-items: center;
+      column-gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &.custom {
+      gap: 1.5rem;
+    }
+  }
+
+  & .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: .75rem;
+    flex: 1;
+  }
+
+  & .input-wrapper-flex {
+    display: flex;
+    column-gap: 1rem;
+  }
+
+  & .input-wrapper-file {
+    display: flex;
+    flex-direction: column;
+    row-gap: .75rem;
+    flex: 2;
+  }
+  
+  & label {
+    font: var(--text-sm);
+  }
+
+  input, select, textarea {
+    appearance: none;
+    width: 100%;
+    border-radius: .5rem;
+    border: 1px solid var(--input-stroke);
+    background: var(--input-base);
+    padding: .75rem 1rem;
+    font: var(--text-md);
+    color: var(--text-heading);
+
+    &::placeholder {
+      color: var(--input-placeholder);
+    }
+
+    &[type="datetime-local"] {
+      text-transform: uppercase;
+      color: var(--input-placeholder);
+
+      &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+    }
+
+    &:focus {
+      border: 1px solid var(--brand-light);
+      outline: none;
+      color: var(--text-heading);
+    }
+  }
+
+  & textarea {
+    height: 8.5rem;
+  }
+
+  & .toggle-group {
+    display: flex;
+    width: 100%;
+    border-radius: .5rem;
+    border: 1px solid var(--input-stroke);
+    background: var(--input-base);
+    padding: .25rem;
+    font: var(--text-md);
+    color: var(--text-heading);
+    gap: .25rem;
+
+    & label {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 1.125rem;
+      border-radius: .3125rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font: var(--text-sm);
+      color: var(--text-body);
+      width: 100%;
+
+      & svg {
+        width: 1rem;
+        height: 1rem;
+
+        & path {
+          fill: var(--input-placeholder);
+          transition: fill 0.2s;
+        }
+      }
+
+      &:hover {
+        background-color: var(--input-stroke);
+      }
+    }
+
+    & input[type="radio"] {
+      display: none;
+
+      &:checked + label {
+        background-color: var(--shape-button);
+        color: var(--text-heading);
+        font: var(--text-sm-semi);
+
+        & svg path {
+          fill: var(--brand-light);
+        }
+      }
+    }
+  }
+
+  & .color-picker {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+
+    & input[type="radio"] {
+      display: none;
+
+      &:checked + label {
+        outline: 2px solid var(--brand-light);
+      }
+    }
+
+    & label {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      border: 6px solid var(--shape-button);
+      transition: border-color 0.2s;
+
+      &:hover {
+        border: 6px solid var(--shape-hover);
+      }
+
+      &.color-blue     { background-color: var(--brand-light); }
+      &.color-purple   { background-color: var(--accent-navy); }
+      &.color-violet   { background-color: var(--accent-purple); }
+      &.color-pink     { background-color: var(--accent-fuchsia); }
+      &.color-red      { background-color: var(--accent-pink); }
+      &.color-orange1  { background-color: var(--feedback-danger); }
+      &.color-orange2  { background-color: var(--accent-orange); }
+      &.color-yellow   { background-color: var(--accent-yellow); }
+      &.color-lime     { background-color: var(--accent-lime); }
+      &.color-green    { background-color: var(--accent-green); }
+      &.color-cyan     { background-color: var(--accent-cyan); }
+    }
+  }
+
+  & .tema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(134px, 1fr));
+    gap: .5rem;
+
+    & label {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--shape-button);
+      border: 1px solid var(--input-stroke);
+      border-radius: .5rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s;
+      padding: .25rem;
+
+      img {
+        width: 100%;
+        height: 4rem;
+        border-radius: .25rem;
+        object-fit: cover;
+      }
+
+      span {
+        text-align: center;
+        padding: .5rem;
+        font: var(--text-sm);
+        color: var(--text-body);
+        display: block
+      }
+
+      &:hover {
+        background-color: var(--shape-hover);
+      }
+    }
+
+    & input[type="radio"] {
+      display: none;
+
+      &:checked + label {
+        border-color: var(--brand-light);
+        outline: 1px solid var(--brand-light);;
+      }
+    }
+  }
+
+  & .switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    & .slider {
+      position: relative;
+      display: inline-block;
+      width: 4rem;
+      height: 2rem;
+      background-color: var(--input-base);
+      border: 1px solid var(--input-stroke);
+      border-radius: 999px;
+      transition: 0.4s;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color:var(--input-stroke);
+        transition: 0.4s;
+        border-radius: 50%;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: .25rem;
+      }
+    }
+
+    & .label-text::after {
+      content: "Escuro";
+      color: var(--text-heading);
+      transition: color 0.3s;
+    }
+
+    & input {
+      display: none;
+
+      &:checked + .slider {
+        background-color: var(--brand-light);
+
+        &:before {
+          background-color:var(--text-heading);
+          transform: translate(calc(4rem - 1.5rem - .3125rem), -50%);
+          left: initial;
+        }
+
+        & + .label-text::after {
+          content: "Claro";
+        }
+      }
+    } 
+  }
+
+  & .file-upload-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    & .file-label {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      background-color: var(--shape-button);
+      color: var(--text-heading);
+      padding: .625rem .75rem;
+      border-radius: .5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      font: var(--text-sm-semi);
+
+      &:hover {
+        background-color: var(--shape-hover);
+      }
+
+      & svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }    
+
+    & .file-name {
+      font: var(--text-md);
+      color: var(--input-placeholder);
+    }
+
+    & .file-input {
+      display: none;
+    }
+  }
+
+  & .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    & input[type="checkbox"] {
+      appearance: none;
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 2px solid var(--input-stroke);
+      border-radius: .25rem;
+      background-color: var(--input-base);
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.2s, border-color 0.2s;
+
+      &:checked {
+        border-color: var(--brand-light);
+
+        &::after {
+          content: '';
+          display: block;
+          width: 11px;
+          height: 8px;
+          position: absolute;
+          inset: 0;
+          margin: auto;
+          background: url('../img/icons/check.svg') no-repeat center;
+        }
+      }
+    }
+
+    & span {
+      flex: 1;
+      
+      a {
+        color: var(--brand-light);
+        font: var(--text-sm-semi);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  & hr {
+    margin: 3rem 0 2.5rem 0;
+    border: 0;
+    border-top: 1px solid var(--input-stroke);
+  }
+
+  button {
+    background-color: var(--brand-dark);
+    border: 0;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    column-gap: .75rem;
+    border-radius: .5rem;
+    padding: .875rem 1.25rem;
+    font: var(--text-md-semi);
+    color: var(--text-heading);
+    transition: background .2s;
+
+    &:hover {
+      background-color: var(--brand-mid);
+    }
+  }
+
+  @media (max-width: 580px) {
+    & .input-wrapper-flex {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
+}

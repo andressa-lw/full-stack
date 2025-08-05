@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: var(--text-md);
+  color: var(--text-body);
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--shape-background)
+}
+
+.mediumTitle {
+  color: var(--text-heading);
+  font: var(--title-md);
+}
+
+.smallTitle {
+  color: var(--text-heading);
+  font: var(--title-sm);
+}

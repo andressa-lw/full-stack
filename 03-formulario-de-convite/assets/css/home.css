@@ -1,0 +1,66 @@
+#app {
+  width: 100%;
+	max-width: 1240px;
+	margin: 0 auto;
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+
+  & aside {
+    background: url('../img/bolo.jpg') no-repeat top center;
+    background-size: cover;
+    max-width: 25rem;
+    min-height: 45.5rem;
+    width: 32.25%;
+    border-radius: .75rem;
+    padding: 2rem;
+    position: sticky;
+    top: 1.25rem;
+
+    & .logo img {
+      width: 3rem;
+      height: auto;
+    }
+
+    & h1 {
+      color: var(--accent-pink);
+      font: 400 2.5rem/100% var(--logo-family);
+      margin: 1rem 0 .625rem 0;
+    }
+
+    p {
+      font-weight: 300;
+      color: var(--text-heading);
+    }
+  }
+
+  & main {
+    background-color: var(--shape-body);
+    width: calc(100% - 32.25%);
+    border-radius: .75rem;
+    padding: 5rem 2rem;
+
+    & .content {
+      max-width: 35rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+
+    & aside {
+      margin: 0 auto;
+      width: 100%;
+      position: initial;
+    }
+
+    & main {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

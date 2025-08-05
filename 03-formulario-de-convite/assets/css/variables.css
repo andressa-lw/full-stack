@@ -1,0 +1,39 @@
+:root {
+	--brand-light: #59b2ff;
+	--brand-dark: #1d6fb6;
+	--brand-mid: #3487cf;
+	--accent-pink: #ff598b;
+	--accent-yellow: #ffcd59;
+	--accent-navy: #6a59ff;
+	--accent-purple: #b259ff;
+	--accent-fuchsia: #ff59f9;
+	--accent-orange: #ff8b59;
+	--accent-lime: #e1ff59;
+	--accent-green: #59ff91;
+	--accent-cyan: #59fff9;
+	--feedback-danger: #ff5959;
+	--input-placeholder: #869198;
+	--input-base: #1c1f21;
+	--input-stroke: #363b40;
+	--shape-background: #131516;
+	--shape-body: #212427;
+	--shape-hover: #383d42;
+	--shape-button: #2d3136;
+	--text-body: #c8cdd0;
+	--text-heading: #f9f9f9;
+
+  --title-family: "Baloo 2", sans-serif;
+  --logo-family: "Leckerli One", sans-serif;
+  --font-family: "Open Sans", sans-serif;
+
+  --title-md: bold 1.75rem/100% var(--title-family);
+  --title-sm: bold 1.125rem/100% var(--title-family);
+
+  --text-md: normal 1rem/100% var(--font-family);
+  --text-sm: normal .875rem/100% var(--font-family);
+  --text-xs: normal .75rem/100% var(--font-family);
+
+	--text-md-semi: 600 1rem/100% var(--font-family);
+  --text-sm-semi: 600 .875rem/100% var(--font-family);
+  --text-xs-semi: 600 .75rem/100% var(--font-family);
+}

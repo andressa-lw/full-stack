@@ -1,0 +1,38 @@
+.dropzone{
+  border: .125rem dashed var(--stroke-default);
+  border-radius: .25rem;
+
+  display: grid;
+  justify-items: center;
+  gap: .5rem;
+
+  text-align: center;
+  padding: 1.75rem 1rem;
+
+  position: relative;
+  &:hover, &:has(input:focus){
+    border-color: var(--stroke-highlight);
+    background-color: var(--surface-secondary);
+    
+    & p{
+      color: var(--text-tertiary);
+    }
+
+    & svg path{
+      stroke: var(--stroke-highlight);
+    }
+  }
+
+  & input{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    
+    width: 100%;
+    height: 100%;
+  }
+
+  & p{
+    color: #A8A29E;
+  }
+}

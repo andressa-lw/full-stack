@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-block: 24px;
+  gap: 24px;
+  font: 14px/150% var(--font-family);
+
+  & span {
+    cursor: pointer;
+
+    &:nth-child(1) {
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 580px) {
+    justify-content: center;
+
+    & span {
+      &:nth-child(1) {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+/* Import font Archivo */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Style Guide */
+  
+  /* Colors */
+  --bg-color: #0F172A;
+  --stroke-color: #1E293B;
+  --brand-color-light: #60A5FA;
+  --brand-color-dark: #1D4ED8;
+  --text-color-primary: #F1F5F9;
+  --text-color-secondary: #CBD5E1;
+
+  /* Typography */
+  --archivo: "Archivo", sans-serif;
+  --h1: 800 24px/135% var(--archivo);
+  --h2: 800 16px/140% var(--archivo);
+  --h3: 800 14px/140% var(--archivo);
+  --text-span: 600 14px/145% var(--archivo);
+  --text: 400 14px/140% var(--archivo);  
+  --text-sm: 400 14px/160% var(--archivo); 
+}
+
+.container{
+  max-width: 1280px;
+  padding-inline: 32px;
+  margin-inline: auto;
+}
+
+body {
+  color: var(--text-color-primary);
+  background-color: var(--bg-color);
+  font-family: var(--archivo);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--brand-color-light);
+}
+
+h1, h2, h3 {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  margin-block: 40px;
+  row-gap: 40px;
+  column-gap: 32px;
+
+  grid-template-columns: 2fr 1.4fr;
+
+  grid-template-areas: 
+  "featured featured"
+  "weekly weekly"
+  "ai aside";
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "featured"
+    "weekly"
+    "ai"
+    "aside";
+  }
+
+  @media (max-width: 768px) {
+    >div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 520px) {
+    >div {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.content-tag {
+  display: inline-block;
+  background-color: var(--brand-color-dark);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font: 500 10px/1.2 var(--archivo);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-color-primary);
+  box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
+}

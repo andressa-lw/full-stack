@@ -1,5 +1,9 @@
 .kit {
   padding: 235px 0 278px 0;
+
+  @media (max-width: 768px) {
+    padding: 80px 0 48px;
+  }
 }
 
 .kit__intro {
@@ -27,6 +31,7 @@
 		margin: 0;
 		font: var(--text-title-sm);
 		color: var(--text-title);
+    text-align: center;
 	}
 
 	& p {
@@ -34,6 +39,15 @@
 		color: var(--text-body);
     text-align: center;
 	}
+
+  @media (max-width: 768px) {
+    margin-bottom: 64px;
+
+    & .kit__star {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 .kit__art {
@@ -166,6 +180,99 @@
 
     & .box__seta3 {
       transform: translate(250px, 220px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    & .kit__book {
+      width: 157px;
+      transform: translate(-20px, 0)
+    }
+
+    & .kit__bookmark--yellow,
+    & .kit__bookmark--purple {
+      height: 180px;
+    }
+
+    & .kit__pin {
+      height: 85px;
+      width: auto;
+      left: 8px;
+    }
+
+    & .kit__bookmark--yellow {
+      transform: translate(25px, -28px) rotate(12deg);
+    }
+
+    & .kit__bookmark--purple {
+      transform: translate(65px, 10px) rotate(22deg);
+    }
+
+    & .kit__pin {
+      transform: translate(-75px, 37px) rotate(-8deg);
+    }
+
+    & span {
+      font-size: 10px;
+    }
+
+    & .box__seta1 {
+      transform: translate(-96px, -120px);
+
+      img {
+        width: 58px;
+        height: auto;
+        margin-top: 11px;
+        margin-left: 30px;
+      }
+    }
+
+    & .box__seta2 {
+      transform: translate(-180px, 46px);
+
+      img {
+        width: 35px;
+        height: auto;
+        margin-top: 11px;
+        margin-left: 14px;
+      }
+    }
+
+    & .box__seta3 {
+      transform: translate(125px, 142px);
+
+      img {
+        width: 48px;
+        height: auto;
+        margin-bottom: 11px;
+        margin-left: 64px;
+      }
+    }
+
+    &:hover {
+      & .kit__bookmark--yellow {
+        transform: translate(25px, -28px) rotate(12deg);
+      }
+
+      & .kit__bookmark--purple {
+        transform: translate(65px, 10px) rotate(22deg);
+      }
+
+      & .kit__pin {
+        transform: translate(-75px, 37px) rotate(-8deg);
+      }
+
+      & .box__seta1 {
+        transform: translate(-96px, -120px);
+      }
+
+      & .box__seta2 {
+        transform: translate(-180px, 46px);
+      }
+
+      & .box__seta3 {
+        transform: translate(125px, 142px);
+      }
     }
   }
 }

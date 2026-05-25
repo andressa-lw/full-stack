@@ -43,6 +43,23 @@
 	--text-tag-letter-spacing: 0.05em;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --text:          14px/150% var(--font-family);
+    --text-lg:       700 20px/125% var(--font-family);
+    --text-md:       12px/170% var(--font-family);
+    --text-sm:       12px/170% var(--font-family);
+    --text-title-lg: 700 28px/1.15 var(--font-family);
+    --text-title-md: 700 24px/1 var(--font-family);
+    --text-title-sm: 700 24px/1 var(--font-family);
+    --text-title-xs: 700 16px/1 var(--font-family);
+    --text-subtitle: 500 16px/1.7 var(--font-family);
+    --text-body-lg:  400 14px/1.4 var(--font-family);
+    --text-body-md:  400 14px/1.4 var(--font-family);
+    --text-body-sm:  400 12px/1.4 var(--font-family);
+    --text-body-xs:  400 12px/1.4 var(--font-family);
+  }
+}
 
 html{
   width: 100%;
@@ -70,4 +87,8 @@ img{
 	max-width: calc(1200px + (32px * 2));
 	padding: 0 32px;
 	margin: 0 auto;
+
+	@media (max-width: 768px) {
+		padding: 0 20px;
+	}
 }

@@ -39,12 +39,12 @@
     object-fit: cover;
   }
 
-  @media (max-width: 1630px) {
+   @media (max-width: 1630px) {
     height: 900px;
   }
 
-  @media (max-width: 680px) {
-    height: 800px;
+  @media (max-width: 768px) {
+    height: 464px;
   }
 }
 
@@ -71,6 +71,15 @@
     animation: fade 1s ease both;
     animation-delay: .5s;
 	}
+
+  @media (max-width: 768px) {
+    top: 116px;
+
+    & p {
+      margin-top: 16px;
+      max-width: 100%;
+    }
+  }
 }
 
 .hero__teaser {
@@ -162,6 +171,26 @@
       img {
         scale: 1;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 48px 0 40px;
+
+    & .icon--center img,
+    & .icon--bottom img {
+      width: 56px;
+      height: 56px;
+    }
+
+    & .hero__teaser-copy span {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    & .icon--center img,
+    & .icon--bottom img {
+      scale: 1;
     }
   }
 }

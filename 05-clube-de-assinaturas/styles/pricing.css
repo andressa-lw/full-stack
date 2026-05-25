@@ -194,7 +194,6 @@
 	}
 }
 
-
 .plan__bunny {
 	position: absolute;
 	top: -51px;
@@ -232,5 +231,51 @@
 		width: 13px;
 		height: 13px;
 		transform: translate(-22px, 0px);
+	}
+}
+
+@media (max-width: 768px) {
+	.pricing {
+		padding: 80px 0 100px;
+	}
+
+	.pricing__cards {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		justify-content: flex-start;
+		align-items: stretch;
+		gap: 16px;
+		margin-top: 64px;
+		padding-bottom: 8px;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	.pricing__cards .plan {
+		flex: 0 0 260px;
+		min-height: auto;
+		scroll-snap-align: center;
+	}
+
+	.pricing__cards .plan:first-child,
+	.pricing__cards .plan:nth-child(3) {
+		transform: none;
+	}
+
+	.pricing__cards:hover .plan:first-child,
+	.pricing__cards:hover .plan:first-child:hover,
+	.pricing__cards:hover .plan:nth-child(2):hover,
+	.pricing__cards:hover .plan:nth-child(3),
+	.pricing__cards:hover .plan:nth-child(3):hover {
+		transform: none;
+	}
+
+	.plan__bunny, .plan__star1, .plan__star2 {
+		display: none;
 	}
 }

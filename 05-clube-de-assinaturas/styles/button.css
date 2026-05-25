@@ -1,0 +1,40 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	text-decoration: none;
+	font: var(--text-button);
+	color: var(--text-title);
+  background: var(--pink-dark);
+	white-space: nowrap;
+  padding: 12px 20px;
+  position: relative;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		background-color: var(--pink-base);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border-radius: inherit;
+		z-index: -1;
+		clip-path: circle(0%);
+		transition: clip-path 500ms ease-in-out;
+	}
+
+  &.secondary {
+    background: var(--blue-dark);
+
+		&::before {
+			background-color: var(--blue-base);
+		}
+  }
+
+	&:hover::before {
+		clip-path: circle(100%);
+	}
+}

@@ -1,0 +1,28 @@
+.nav {
+	position: absolute;
+  top: 0;
+  left: 0;
+	z-index: 9;
+  width: 100%;
+  padding: 56px;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 32px;
+  }
+}
+
+.nav__logo {
+	width: 230px;
+	height: 58px;
+
+  &.desk {
+    display: block;
+  }
+
+  &.mob {
+    display: none;
+  }
+}

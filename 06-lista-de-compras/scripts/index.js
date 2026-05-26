@@ -6,6 +6,7 @@ const list = document.querySelector("#shopping-list");
 const alertBox = document.querySelector(".alert");
 
 let items = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+let alertTimeoutId = null;
 
 renderList();
 showAlert(false);
@@ -107,6 +108,11 @@ function showAlert(message) {
 		return;
 	}
 
+	if (alertTimeoutId) {
+		clearTimeout(alertTimeoutId);
+		alertTimeoutId = null;
+	}
+
 	if (!message) {
 		alertBox.hidden = true;
 		alertBox.textContent = "";
@@ -115,4 +121,10 @@ function showAlert(message) {
 
 	alertBox.textContent = message;
 	alertBox.hidden = false;
+
+	alertTimeoutId = setTimeout(function () {
+		alertBox.hidden = true;
+		alertBox.textContent = "";
+		alertTimeoutId = null;
+	}, 3000);
 }

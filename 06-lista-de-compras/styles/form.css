@@ -1,0 +1,32 @@
+.shopping-form {
+	display: grid;
+	grid-template-columns: 1fr 160px;
+	gap: 16px;
+	margin-bottom: 40px;
+}
+
+#item-input {
+	width: 100%;
+	min-height: 44px;
+	padding: 11px 18px;
+	border: 2px solid var(--border-primary);
+	border-radius: 12px;
+	background: var(--background-secondary);
+	font: var(--text-paragraph);
+	color: var(--content-primary);
+	outline: none;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: var(--content-tertiary);
+  }
+
+  &:hover {
+    border-color: var(--border-hover);
+  }
+
+  &:focus-visible {
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand) 18%, transparent);
+  }
+}

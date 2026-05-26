@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de Compras</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="styles/index.css" />
+	</head>
+	<body>
+		<main class="page">
+			<div class="container app">
+				<a href="" class="logo">
+					<img src="assets/logo.svg" alt="Logo da aplicação de lista de compras" />
+				</a>
+
+				<a class="back-link" href="#" aria-label="Voltar para a página anterior"><- Voltar </a>
+
+				<header class="app-header">
+					<h1>Compras da semana</h1>
+				</header>
+
+				<form id="shopping-form" class="shopping-form">
+					<label class="sr-only" for="item-input">Nome do item</label>
+					<input type="text" id="item-input" placeholder="Adicione um novo item" required />
+					<button class="button" type="submit">Adicionar item</button>
+				</form>
+
+				<ul id="shopping-list" class="shopping-list" aria-label="Lista de compras"></ul>
+
+				<div class="alert" role="status" aria-live="polite" hidden></div>
+			</div>
+		</main>
+
+		<script src="scripts/index.js"></script>
+	</body>
+</html>

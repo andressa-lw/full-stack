@@ -1,0 +1,27 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  width: fit-content;
+  margin: 0 auto 76px auto;
+}
+
+.back-link {
+	color: var(--color-brand);
+	text-decoration: none;
+	font: var(--text-link);
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.app-header {
+	margin-bottom: 44px;
+}
+
+.app-header h1 {
+	font: var(--text-title);
+}

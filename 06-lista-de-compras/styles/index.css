@@ -1,0 +1,41 @@
+@import url("./global.css");
+@import url("./button.css");
+@import url("./header.css");
+@import url("./form.css");
+@import url("./list.css");
+@import url("./alert.css");
+
+.page {
+	min-height: 100dvh;
+	padding: 62px 0;
+}
+
+.app {
+	max-width: 688px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (max-width: 768px) {
+	.page {
+		padding: 32px 0;
+	}
+
+	.app-header {
+		margin-bottom: 28px;
+	}
+
+	.shopping-form {
+		grid-template-columns: 1fr;
+	}
+}
